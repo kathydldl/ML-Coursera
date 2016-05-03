@@ -82,17 +82,17 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.01;
-num_iters = 400;
+alpha = 0.1;
+num_iters = 50;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
 [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters);
 
-[tehta1, J_history1] = gradientDescentMulti(X, y, zeros(3,1), 0.003, 400);
-[tehta2, J_history2] = gradientDescentMulti(X, y, zeros(3,1), 0.03, 400);
-[tehta3, J_history3] = gradientDescentMulti(X, y, zeros(3,1), 0.1, 400);
-[tehta4, J_history4] = gradientDescentMulti(X, y, zeros(3,1), 0.3, 400);
+[tehta1, J_history1] = gradientDescentMulti(X, y, zeros(3,1), 1, 50);
+[tehta2, J_history2] = gradientDescentMulti(X, y, zeros(3,1), 3, 50);
+[tehta3, J_history3] = gradientDescentMulti(X, y, zeros(3,1), 10, 50);
+[tehta4, J_history4] = gradientDescentMulti(X, y, zeros(3,1), 0.3, 50);
 % Plot the convergence graph
 figure;
 plot(1:numel(J_history), J_history, '-b', 'LineWidth', 2);
